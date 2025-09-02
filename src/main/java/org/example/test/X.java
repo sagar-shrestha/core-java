@@ -9,5 +9,9 @@ public class X {
         SagarMarkerInterface sagarMarkerInterfaceForC = new C();
 
         String hello = sagarMarkerInterfaceForA.getClass().getName();
+
+        org.example.test.SagarMarkerInterface sagarMarkerInterface = SagarFactory.getSalary("A");
+//        int salary = sagarMarkerInterface
+        System.out.println("Hello: " + sagarMarkerInterface);
     }
 }
