@@ -4,6 +4,17 @@ public class MethodReferenceSumExample {
 
     public static void main(String[] args) {
 
+        /**
+         * Method Reference are special types of lambda expression
+         *
+         * Type 1: Static Method
+         *
+         * Single line lambda can be replaced with method reference
+         *
+         * Any method can be used as method reference???
+         *
+         */
+
         // anonymous method way
         ISum sum = new ISum() {
             @Override
@@ -25,6 +36,11 @@ public class MethodReferenceSumExample {
         ISum iSum1 = MethodReferenceSumExample::addition;
         int sum3 = iSum1.sum(1, 2);
         System.out.println("Method reference way: " + sum3);
+
+        // Method reference with existing Classes
+        ISum iSum2 = Integer::sum;
+        int sum4 = iSum2.sum(1, 2);
+        System.out.println("Method reference way: " + sum4);
     }
 
     public static int addition(int value1, int value2) {
